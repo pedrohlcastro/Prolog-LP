@@ -1,5 +1,3 @@
-gerar(X, X, [_]).
-gerar(X, Y, Z) :- gerar(X+1, Y,  concatenar([X], Z, L1)).
+gerar(X, X, [X]).
+gerar(X, Y, [X|L]) :- X1 is X+1, gerar(X1, Y, L).
 
-concatenar([], L, L).
-concatenar([X|L1], L2, [X|L3]) :- concatenar(L1, L2, L3).
